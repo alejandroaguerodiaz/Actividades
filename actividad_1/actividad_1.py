@@ -77,10 +77,10 @@ while i < max_attempts:
 
     # Mostrar la palabra parcialmente adivinada 
     letters = []
-    for i in range(len(secret_word)):
+    for j in range(len(secret_word)):
 
-        if secret_word[i] in guessed_letters or word_displayed[i] != "_":
-            letters.append(secret_word[i])
+        if secret_word[j] in guessed_letters or word_displayed[j] != "_":
+            letters.append(secret_word[j])
         else:
             letters.append("_")
             
