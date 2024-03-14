@@ -26,7 +26,7 @@ while True:
     dificultad = input("Ingrese la dificultad deseada, facil, media o dificil: ").lower()
 
     if dificultad not in dificultades:
-        print("El valor ingresado no corresponde con lo pedido \n")
+        print("El valor ingresado no corresponde con lo pedido")
     else:
         break
 
@@ -50,13 +50,16 @@ else:
 # Mostrarla palabra parcialmente adivinada
 
 print(f"Dificultad: {dificultad}. Comienza el juego. \n Estoy pensando en una palabra. ¿Puedes adivinar cuál es?")
-print(f"Palabra: {word_displayed} \n")
+print(f"Palabra: {word_displayed} ")
 
 i = 0
 while i < max_attempts:
 #for i in range(max_attempts):
     # Pedir al jugador que ingrese una letra
     letter = input("Ingresa una letra: ").lower()
+    if not letter.isalpha():
+        print("El valor ingresado tiene que ser una letra de la A a la Z")
+        continue
 
     # Verificar si la letra ya ha sido adivinada
     if letter in guessed_letters:
