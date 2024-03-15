@@ -1,5 +1,6 @@
 funcionalidades = ["agregar", "eliminar", "mostrar", "salir"]
 def seleccion():
+    # No sale del loop hasta que se ingresen los datos de manera correcta
     while True:
         mensaje = str(input("Ingrese el tipo de accion que desea realizar, agregar, eliminar, mostrar o salir: ")).lower()
         if mensaje in funcionalidades:
